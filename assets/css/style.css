@@ -27,6 +27,11 @@
 #header {
     height: 46px;
     background-color: #000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
     /* #000 màu đen
     #fff màu trắng 
     line-height: chiều cao cho chứ
@@ -94,7 +99,8 @@ html {
     box-shadow: 0 0 10px rgba(0
     , 0, 0, 0.3);
 }
- li:hover .subnav{
+
+#nav li:hover .subnav{
     display: block;
 }
 #nav .icon-arrow{
@@ -109,12 +115,53 @@ html {
 #slider {
     /* background-color: #333; */
     min-height: 500px;
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url(/assets/img/slider/slider1.webp) top center/ cover no-repeat;
+}
+#slider .text-content{
+    position: absolute;
+   
+    bottom: 35px;
+    /* left: 50%;
+     transform: translateX(-50%);  */
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    width: 100%;
+    display: block;
+  
 }
 
-#content {
+#slider .text-heading{
+ font-weight: 100;
+ margin-bottom: 25px;
+}
+text-describ{
+
+}
+#content{
+    height: 300px;
+}
+
+#content .content-section{
     
+    text-align: center;
 }
-
+#content .content-heading{
+     margin-top: 40px;
+     margin-bottom: 20px;
+}
+#content .content-pragrap{
+     margin: 10px 0;
+     font-style: italic;
+     opacity: 0.6;
+}
+#content .content-des{
+   text-align: justify;
+   padding: 10px 100px;
+   line-height: 30px;
+}
 #footer {
     
 }
