@@ -1,0 +1,120 @@
+/* Reset CSS */
+* {
+    /* emmet: viết nhanh */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* DU ntn vẫn ko bị tràn border-box */
+}
+/* 
+ Vị trí của nó 
+ Kích thước(width,height)
+ Màu sắc 
+ Kiểu dáng (Kiểu chữ, hình tròn, vuông,..)
+*/
+/* 
+ Làm từ ngoài vào trong 
+ Từ trên xuống dưới
+ Tổng quan đến chi tiết
+*/
+/*  
+ Navigation dùng thẻ <ul><li>
+*/
+#main {
+    
+}
+
+#header {
+    height: 46px;
+    background-color: #000;
+    /* #000 màu đen
+    #fff màu trắng 
+    line-height: chiều cao cho chứ
+    font-family:xét kiểu chữ
+    KO có chân Arial có chân Time Roma
+    html kế thừa từ thẻ có chữ còn * thì tất cả
+    chọn thẻ rồi ghi hover
+    */
+}
+#header #nav{
+    display: inline-block;
+}
+#header .search{
+    float: right;
+    padding: 0 24px;
+    cursor: pointer;
+}
+#header .search:hover{
+    background-color: red;
+}
+#header .search-arrow{
+     color: #fff;
+     font-size: 20px;
+     line-height: 46px;
+     
+}
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+#nav {
+
+}
+#nav > li {
+    display: inline-block;
+    position: relative;
+    
+}
+
+#nav > li > a {
+    color: #fff;
+    text-transform: uppercase;
+}
+#nav li a{
+    
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: inline-block;
+    width: 100%;
+}
+#nav > li:hover > a, #nav .subnav  li:hover a {
+    color: #000;
+    background-color: #ccc;
+    
+}
+#nav, .subnav{
+    list-style-type: none;
+}
+
+#nav .subnav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0
+    , 0, 0, 0.3);
+}
+ li:hover .subnav{
+    display: block;
+}
+#nav .icon-arrow{
+    font-size: 12px;
+}
+#nav .subnav a{
+    color: #000;
+    padding: 0 12px;
+    
+}
+
+#slider {
+    /* background-color: #333; */
+    min-height: 500px;
+}
+
+#content {
+    
+}
+
+#footer {
+    
+}
