@@ -21,8 +21,8 @@
  Navigation dùng thẻ <ul><li>
 */
 #main {
-    
 }
+   
 
 #header {
     height: 46px;
@@ -96,7 +96,7 @@ html {
     display: none;
     position: absolute;
     top: 100%;
-    background-color: #fff;
+   background-color: #fff;
     box-shadow: 0 0 10px rgba(0
     , 0, 0, 0.3);
 }
@@ -175,12 +175,13 @@ text-describ{
 }
 
 #content .team-list{
-    margin: 48px 0;
+    
    display: flex;
    flex-direction: row;
    justify-content: center;
    align-items: center;
    gap: 100px;
+  
 }
 #content .tour-section{
    background-color: #000;
@@ -242,7 +243,7 @@ text-describ{
     border: 2px solid #ccc;
     color:#000;
     background-color: #fff;
-    height: 350px;
+    height: 360px;
     width: 250px;
 }
 .place-list .place-content{
@@ -266,7 +267,7 @@ text-describ{
     border: 1px solid #000;
     color: #fff;
     background-color: #000;
-    margin-top: 5px;
+    margin-bottom: 20px;
     margin-left: 5px;
     padding: 5px 5px;;
 }
@@ -280,9 +281,12 @@ text-describ{
     top: 0;
     left: 0;
     bottom: 0;
-   display: flex;
+   display: none;
    align-items: center;
    justify-content: center;
+}
+.modal.open{
+    display: flex;
 }
 .modal .modal-container{
     background-color: #fff;
@@ -290,6 +294,7 @@ text-describ{
     width: 900px;
     max-width: calc(100%-32px);
     position: relative;
+    animation: anima ease 0.5s;
 }
 .close-modal{
     position: absolute;
@@ -312,9 +317,7 @@ text-describ{
     gap: 10px;
    
 }
-.heading-modal:hover{
-     opacity: 0.9;
-}
+
 .body-modal{
   padding: 16px;
 }
@@ -350,7 +353,85 @@ text-describ{
 .modal-footer a{
      color: aqua;
 }
-
-#footer {
+@keyframes anima{
+    from{
+        opacity: 0;
+       transform: translateY(-100px);
+    }
+    to{
+        opacity: 1 ;
+      transform: translateY(0);
+    }
     
+}
+.content-section{
+    height: 500px;
+}
+.inf-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    height: 200px;
+   margin: 0 200px;
+}
+.inf-content{
+     display: flex;
+     flex-direction: column;
+     align-items: last baseline;
+     gap: 10px;
+    width: 200px;
+}
+.inf-content i{
+     font-weight: 600;
+}
+.send-contact{
+    position: relative;
+    height: 100px;
+    width: 600px;
+  
+}
+.send-contact .name{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+}
+.send-contact .email {
+     position: absolute;
+    top: 0;
+    left: 200px;
+     height: 30px;
+}
+.send-contact .mess{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 365px;
+     height: 30px;
+}
+.send-contact .send{
+    position: absolute;
+   bottom: 0;
+    right: 40%;
+     height: 25px;
+     width: 40px;
+     background-color: #000;
+     color: #fff;
+}
+.back-ground {
+  background: url('/assets/img/place/back-ground.jpg') top center/ cover no-repeat;
+
+  height: 1000px;
+  width: 100%;
+}
+#footer {
+  background-color: #333;
+  height: 100px;
+  color: white;
+  text-align: center;
+}
+
+.inf-footer {
+  padding: 20px;
 }

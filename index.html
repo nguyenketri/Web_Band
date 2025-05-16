@@ -83,7 +83,7 @@ enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
                 <h3 class="place-heading">New Work</h3>
                 <p class="place-time">Fri 27 Nov 2016</p>
                 <p class="place-des">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                <a href="#" class="place-buy">Buy Tickets</a>
+                <button  class="place-buy  js-ticket">Buy Tickets</button>
               </div>
             </div>
             <div class="place-item">
@@ -92,7 +92,7 @@ enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
                 <h3 class="place-heading">Paris</h3>
                 <p class="place-time">Sat 28 Nov 2016</p>
                 <p class="place-des">Praesent tincidunt sed tellus utrutrum sed vitae Justo.</p>
-                <a href="#" class="place-buy">Buy Tickets</a>
+                <button  class="place-buy js-ticket">Buy Tickets</button>
               </div>
             </div>
             <div class="place-item">
@@ -101,7 +101,7 @@ enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
                 <h3 class="place-heading">San Francisco</h3>
                 <p class="place-time">Sun 29 Nov 2016</p>
                 <p class="place-des">Praesent tincidunt sed tellus utrutrum sed vitae justo.</p>
-                <a href="#" class="place-buy">Buy Tickets</a>
+                <button  class="place-buy js-ticket">Buy Tickets</button>
               </div>
             </div>
 
@@ -110,15 +110,33 @@ enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
       </div>
       
       <div class="content-section">
-        <h2 class="content-heading">The Band</h2>
-        <p class="content-pragrap">We love music</p>
-        <p class="content-des">Mùa hè đến, nắng vàng trải dài trên những con phố quen thuộc. Tiếng ve râm ran vang lên từ những tán phượng vĩ, gợi lại trong lòng bao kỷ niệm tuổi học trò. Trẻ em ríu rít rủ nhau ra sân chơi, những cánh diều chao lượn trên bầu trời trong vắt. Mùi hoa sữa thoang thoảng trong gió, quyện cùng tiếng rao của những gánh hàng rong, tạo nên một bản giao hưởng mùa hè đầy sống động. Trong cái oi ả của trời nắng, con người ta lại tìm đến những quán nước ven đường, thưởng thức ly trà đá mát lạnh và kể cho nhau nghe những câu chuyện không đầu không cuối. Mùa hè không chỉ là thời điểm của cái nóng, mà còn là mùa của những cuộc gặp gỡ, chia tay, và cả những khởi đầu mới mẻ.</p>
-      </div>
-
+        <h2 class="content-heading">Contact</h2>
+        <p class="content-pragrap">Information of ticket</p>
+        <div class="inf-contact">
+          <div class="inf-content">
+            <i class="ti-location-pin"> Chicago,US</i>
+            <i class="ti-mobile">  Phone:+00 151515</i>
+            <i class="ti-email">Email:mail@gmail.com</i>
+          </div>
+          
+          <div class="send-contact">
+            <input class="name" type="text" placeholder="Name">
+            <input class="email" type="text" placeholder="Email">
+            <input class="mess" type="text" placeholder="Message">
+            <button class="send">Send</button>
+          </div>
+        </div>
+      
+       </div>
+       <div class="back-ground">d</div>
     </div>
+    <footer id="footer">
+     <div class="inf-footer"></div>
+    </footer>
+      
     <div class="modal">
-    <div class="modal-container">
-      <div class="close-modal">
+    <div class="modal-container js-container">
+      <div class="close-modal js-close">
         <i class="ti-close"></i>
       </div>
       <header class="heading-modal">
@@ -138,7 +156,7 @@ enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
         </label>
         <input id="mail" type="email" class="input-modal" placeholder="Email...">
         <button class="pay-ticket">
-          Pay
+        <a href="#">Pay</a>
           <i class="ti-check"></i>
         </button>
       </div>
@@ -148,16 +166,34 @@ enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
     </div>
     </div>
 
+  
     </div>
 
-   <div id="footer">
-
-
-   </div>
    
-
-
-
-   </div>
+  </div>
+  <script>
+    const buyBtns = document.querySelectorAll('.js-ticket');
+    const open = document.querySelector('.modal');
+   
+    // Hàm thêm buy ticket
+    const handleClick =()=>{
+      open.classList.add('open')
+    }
+    // Hàm close buy ticket
+    const handleClose=()=> {
+      open.classList.remove('open')
+    }
+    // Lặp qua các phần tử trong mảng của buyBtns
+    for(const item of buyBtns){
+      item.addEventListener('click',handleClick);
+    }
+     open.addEventListener('click',handleClose)
+    const close = document.querySelector('.js-close');
+    const container =document.querySelector('.js-container')
+    container.addEventListener('click',(event)=> {
+       event.stopPropagation()
+    })
+    close.addEventListener('click',handleClose);
+  </script>
 </body>
 </html>
